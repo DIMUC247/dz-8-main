@@ -1,0 +1,24 @@
+{% extends "_base.html" %}
+
+{% block center_content %}
+<form action="{{ url_for('pizzas.add_pizza') }}" method="post">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Назва піцци</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="name">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">ціна піцци</label>
+    <input type="number" class="form-control" id="exampleInputEmail1" name="price">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Пароль адміністратора</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+  </div>
+  <button type="submit" class="btn btn-primary">Додати</button>
+  <h3>{{ msg }}</h3>
+</form>
+
+{% if block %}
+    <img src="https://http.cat/401">
+{% endif %}
+{% endblock center_content %}

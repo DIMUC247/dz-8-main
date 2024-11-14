@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "dz-8-main"
+version = "0.1.0"
+description = ""
+authors = ["DIMUC247 <dimuch.v09@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+sqlalchemy = "^2.0.36"
+py-dotenv = "^0.1"
+flask = "^3.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

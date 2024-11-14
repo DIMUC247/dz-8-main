@@ -1,0 +1,20 @@
+{% extends "_base.html" %}
+
+{% block content %}
+{% block title %}
+    PIZZERIA DE MAINTO
+{% endblock title %}
+{% endblock content %}
+
+{% block center_content %}
+    {% for pizza in pizzas %}
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Назва піцци</h5>
+            <p class="card-text"><em>Ціна піцци: </em>{{ pizza.price }}</p>
+            <a href="{{url_for('pizzas.edit_pizza', id=pizza.id)}}">редагувати</a>
+            <a href="{{url_for('pizzas.del_pizza', id=pizza.id)}}">видалити</a>
+        </div>
+        </div>
+    {% endfor %}
+{% endblock center_content %}
